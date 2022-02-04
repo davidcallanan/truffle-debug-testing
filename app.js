@@ -150,5 +150,6 @@ let { ast, data, evm, solidity, trace } = Debugger.selectors;
 let view = session.view(data.current.identifiers.sections);
 fs.writeFileSync("./view.json", JSON.stringify(view, null, 2));
 console.log(view);
+console.log(await session.variables());
 
 console.log("DONE");
